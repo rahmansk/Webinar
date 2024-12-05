@@ -1,0 +1,25 @@
+alerts:
+- rule: DEPLOYMENT_FAILED
+- rule: DOMAIN_FAILED
+
+databases:
+  - name: blogs
+    engine: MONGODB
+    version: "4"
+    production: true
+    cluster_name: Blogs
+    db_name: Blog
+functions:
+- github:
+    branch: master
+    deploy_on_push: true
+    repo: ps99-io/Webinar
+  routes:
+    - path: /api
+  name: do-serverless
+  source_dir: blogs-backend
+  envs:
+    - key : DB_URI
+      scope: RUN_AND_BUILD_TIME
+      value: ${blogs.DATABASE_URL}
+name: do-serverless

@@ -1,0 +1,35 @@
+environment: 
+  DB_URI: "${DB_URI}"
+# parameters: {}
+packages:
+  - name: blogs
+    actions: 
+      - name: createBlogs
+        limits:
+          timeout: 5000
+          memory: 256
+      - name: getBlogs
+        limits:
+          timeout: 5000
+          memory: 256
+      - name: updateBlogs
+        limits:
+          timeout: 5000
+          memory: 256
+      - name: deleteBlogs
+        limits:
+          timeout: 5000
+          memory: 256
+    # environment: {}
+    # parameters: {}
+    # annotations: {}
+    # functions:
+    #   - name: hello
+    #     binary: false
+    #     main: ''
+    #     runtime: 'nodejs:default'
+    #     web: true
+    #     parameters: {}
+    #     environment: {}
+    #     annotations: {}
+    #     limits: {}
