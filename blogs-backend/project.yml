@@ -1,6 +1,6 @@
 environment: 
   DB_URI: "${DB_URI}"
-# parameters: {}
+  ## parameters: {}
 packages:
   - name: blogs
     actions: 
