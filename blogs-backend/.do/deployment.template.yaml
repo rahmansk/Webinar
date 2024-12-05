@@ -13,7 +13,7 @@ functions:
 - github:
     branch: master
     deploy_on_push: true
-    repo: rahman.sk/Webinar
+    repo: rahmansk/Webinar
   routes:
     - path: /api
   name: do-serverless
